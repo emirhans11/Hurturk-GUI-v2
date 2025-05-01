@@ -1,0 +1,1 @@
+pyinstaller --windowed --icon=hurturk_logo.ico main.py

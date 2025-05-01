@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Harita</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        html, body, #map {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .plane-icon {
+            width: 35px;
+            height: 35px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }  
+        .plane-icon.friendly {
+                background-image: url("icons/plane.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 35px;
+                height: 35px;
+            }
+        .friendly {
+            background-image: url('icons/plane.png');
+        }
+
+        .enemy {
+            background-image: url('icons/plane.png');
+            filter: hue-rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([40.742, 29.942], 16);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Hava Savunma Sistemleri
+        L.circle([40.745, 29.945], {
+            color: 'red',
+            fillColor: 'red',
+            fillOpacity: 0.3,
+            radius: 100
+        }).addTo(map).bindPopup("Hava Savunma Sistemi");
+
+        L.circle([40.740, 29.950], {
+            color: 'red',
+            fillColor: 'red',
+            fillOpacity: 0.3,
+            radius: 80
+        }).addTo(map).bindPopup("Hava Savunma Sistemi");
+
+        // Fonksiyon: yönü verilen uçak ekle
+        var ourPlaneMarker = null;
+
+function updateOurPlane(lat, lon, headingDeg) {
+    if (!ourPlaneMarker) {
+        var icon = L.divIcon({
+            className: '',
+            html: `<div class="plane-icon friendly" style="transform: rotate(${headingDeg}deg);"></div>`,
+            iconSize: [35, 35],
+            iconAnchor: [17, 17]
+        });
+
+        ourPlaneMarker = L.marker([lat, lon], { icon: icon }).addTo(map).bindPopup("Dost Uçak");
+    } else {
+        ourPlaneMarker.setLatLng([lat, lon]);
+
+        // Sadece dönüşü güncelle
+        const iconHtml = `<div class="plane-icon friendly" style="transform: rotate(${headingDeg}deg);"></div>`;
+        ourPlaneMarker.setIcon(
+            L.divIcon({
+                className: '',
+                html: iconHtml,
+                iconSize: [35, 35],
+                iconAnchor: [17, 17]
+            })
+        );
+    }
+}
+        // Uçakları ekle
+        addPlane(40.742, 29.942, 90, 'friendly');  // sağa bakan dost uçak
+        addPlane(40.744, 29.9435, 225, 'enemy');   // sola aşağıya bakan rakip uçak
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+self.lbl_kamera.setStyleSheet("""
+        background-image: url(icons/cam3.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        """) 
+# Minimize Butonu
+self.bt_minimize = QtWidgets.QPushButton(self.centralwidget)
+self.bt_minimize.setGeometry(QtCore.QRect(1480, 30, 31, 31))
+self.bt_minimize.setStyleSheet("""
+    QPushButton {
+        background-color: transparent;
+        border: none;
+        image: url(icons/minimize.png);
+    }
+    QPushButton:hover {
+        background-color: #dcdcdc;
+        border-radius: 4px;
+    }
+""")
+self.bt_minimize.setText("")
+self.bt_minimize.setObjectName("bt_minimize")
+
+# Maximize/Fullscreen Butonu
+self.bt_maximize = QtWidgets.QPushButton(self.centralwidget)
+self.bt_maximize.setGeometry(QtCore.QRect(1510, 30, 31, 31))
+self.bt_maximize.setStyleSheet("""
+    QPushButton {
+        background-color: transparent;
+        border: none;
+        image: url(icons/fullscreen.png);
+    }
+    QPushButton:hover {
+        background-color: #4da6ff;
+        border-radius: 4px;
+    }
+""")
+self.bt_maximize.setText("")
+self.bt_maximize.setObjectName("bt_maximize")
+
+# Kapatma Butonu (Exit)
+self.bt_close = QtWidgets.QPushButton(self.centralwidget)
+self.bt_close.setGeometry(QtCore.QRect(1540, 30, 41, 31))
+self.bt_close.setStyleSheet("""
+    QPushButton {
+        background-color: transparent;
+        border: none;
+        image: url(icons/exit.png);
+    }
+    QPushButton:hover {
+        background-color: #ff4d4d;
+        border-radius: 4px;
+    }
+""")
+self.bt_close.setText("")
+self.bt_close.setObjectName("bt_close")

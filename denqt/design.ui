@@ -1,0 +1,990 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1650</width>
+    <height>860</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">background: transparent;</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="0" alignment="Qt::AlignLeft">
+     <widget class="QPushButton" name="baglan_btn">
+      <property name="text">
+       <string>BAĞLAN</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>:/window/icons/down-arrow.png</normaloff>:/window/icons/down-arrow.png</iconset>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QTabWidget" name="arayuz">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <property name="styleSheet">
+        <string notr="true">background-image: url(:/team/icons/team-logo.png);
+background-repeat: no-repeat;
+background-position: center;
+
+position: relative;
+
+before {
+    content: &quot;&quot;;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(:/team/icons/team-logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.5; /* Burada şeffaflık oranını ayarlayabilirsiniz */
+    z-index: -1; /* Pseudo-element'in arka planda kalmasını sağlar */
+}
+</string>
+       </property>
+       <attribute name="title">
+        <string>ANA SAYFA</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="3" column="1">
+         <widget class="QGroupBox" name="groupBox_2">
+          <property name="styleSheet">
+           <string notr="true">background: transparent;</string>
+          </property>
+          <property name="title">
+           <string/>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_4">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_11">
+             <property name="text">
+              <string>Enlem</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLabel" name="lat_lbl">
+             <property name="text">
+              <string>0,0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_12">
+             <property name="text">
+              <string>Boylam</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLabel" name="lon_lbl">
+             <property name="text">
+              <string>0,0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_13">
+             <property name="text">
+              <string>İrtifa</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLabel" name="alt_lbl">
+             <property name="text">
+              <string>0,0</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="0" column="2" rowspan="3" colspan="2">
+         <widget class="QGroupBox" name="groupBox_5">
+          <property name="styleSheet">
+           <string notr="true">background: transparent;</string>
+          </property>
+          <property name="title">
+           <string>GroupBox</string>
+          </property>
+          <widget class="QLabel" name="map_lbl">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>10</y>
+             <width>801</width>
+             <height>491</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background: transparent;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>../Pictures/Screenshots/Ekran görüntüsü 2025-02-08 203900.png</pixmap>
+           </property>
+          </widget>
+          <widget class="QLabel" name="hud_lbl">
+           <property name="geometry">
+            <rect>
+             <x>420</x>
+             <y>60</y>
+             <width>261</width>
+             <height>131</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background: transparent;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>../Pictures/Screenshots/Ekran görüntüsü 2025-02-11 154329.png</pixmap>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="arm_btn">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>20</y>
+             <width>81</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background: transparent;</string>
+           </property>
+           <property name="text">
+            <string>ARM</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="kac_btn">
+           <property name="geometry">
+            <rect>
+             <x>80</x>
+             <y>20</y>
+             <width>81</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background: transparent;</string>
+           </property>
+           <property name="text">
+            <string>KAÇ</string>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="mod_cb">
+           <property name="geometry">
+            <rect>
+             <x>190</x>
+             <y>20</y>
+             <width>101</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background: transparent;</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>STABILIZED</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>MANUAL</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>LAND</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>HOLD</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>MISSION</string>
+            </property>
+           </item>
+          </widget>
+          <widget class="QPushButton" name="mod_btn">
+           <property name="geometry">
+            <rect>
+             <x>290</x>
+             <y>20</y>
+             <width>80</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background: transparent;</string>
+           </property>
+           <property name="text">
+            <string>select</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="sinirciz_btn">
+           <property name="geometry">
+            <rect>
+             <x>380</x>
+             <y>20</y>
+             <width>81</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background: transparent;</string>
+           </property>
+           <property name="text">
+            <string>Sınır Çiz</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>:/map/icons/plane.png</normaloff>:/map/icons/plane.png</iconset>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="hss_btn">
+           <property name="geometry">
+            <rect>
+             <x>470</x>
+             <y>20</y>
+             <width>81</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background: transparent;</string>
+           </property>
+           <property name="text">
+            <string>HSS Yenile</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>:/map/icons/plane.png</normaloff>:/map/icons/plane.png</iconset>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="takp_cbh">
+           <property name="geometry">
+            <rect>
+             <x>560</x>
+             <y>20</y>
+             <width>81</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background: transparent;</string>
+           </property>
+           <property name="text">
+            <string>Takip Et</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QGroupBox" name="groupBox_4">
+          <property name="styleSheet">
+           <string notr="true">background: transparent;</string>
+          </property>
+          <property name="title">
+           <string/>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="0" column="1">
+            <widget class="QLabel" name="roll_lbl">
+             <property name="text">
+              <string>0,0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_8">
+             <property name="text">
+              <string>Roll (deg)</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_9">
+             <property name="text">
+              <string>Pitch (deg)</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLabel" name="yaw_lbl">
+             <property name="text">
+              <string>0,0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_10">
+             <property name="text">
+              <string>Yaw (deg)</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLabel" name="pitch_lbl">
+             <property name="text">
+              <string>0,0</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QGroupBox" name="groupBox_hizverileri_2">
+          <property name="styleSheet">
+           <string notr="true">background: transparent;</string>
+          </property>
+          <property name="title">
+           <string>Hız Verileri</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_6">
+           <item row="0" column="0">
+            <widget class="QLabel" name="lbl_hz">
+             <property name="text">
+              <string>HAVA HIZI (m/s):</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLabel" name="havahizi_lbl">
+             <property name="text">
+              <string>0.00</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_15">
+             <property name="text">
+              <string>YER HIZI(m/s):</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLabel" name="yerhizi_lbl">
+             <property name="text">
+              <string>0.00</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="3" column="2" rowspan="2" colspan="2">
+         <widget class="QLabel" name="terminal_lbl">
+          <property name="styleSheet">
+           <string notr="true">background: transparent;</string>
+          </property>
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QGroupBox" name="groupBox_7">
+          <property name="styleSheet">
+           <string notr="true">background: transparent;</string>
+          </property>
+          <property name="title">
+           <string>Uçuş Bilgileri</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_5">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>Uçuş modu:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLabel" name="ucusmod_lbl">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_5">
+             <property name="text">
+              <string>Uçuş süresi:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLabel" name="ucussuresi_lbl">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QGroupBox" name="groupBox">
+          <property name="styleSheet">
+           <string notr="true">background: transparent;</string>
+          </property>
+          <property name="title">
+           <string>Önerilen Sıralama</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_7">
+           <item row="0" column="0">
+            <widget class="QRadioButton" name="iha1_rbtn">
+             <property name="text">
+              <string>İHA 1</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QRadioButton" name="iha2_rbtn">
+             <property name="text">
+              <string>İHA 2</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QRadioButton" name="iha3_rbtn">
+             <property name="text">
+              <string>İHA 3</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QPushButton" name="select_btn">
+             <property name="text">
+              <string>SELECT</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="0" column="0" rowspan="2" colspan="2">
+         <widget class="QLabel" name="kamera_lbl">
+          <property name="styleSheet">
+           <string notr="true">border-image: url(:/team/icons/kamera.png);
+
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>BAGLANTI PENCERESİ</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_9">
+        <item row="1" column="1" rowspan="2">
+         <widget class="QGroupBox" name="gb_guvenlikonlemleri2">
+          <property name="styleSheet">
+           <string notr="true">background: transparent;</string>
+          </property>
+          <property name="title">
+           <string>Güvenlik Önlemleri</string>
+          </property>
+          <widget class="QLabel" name="label_3">
+           <property name="geometry">
+            <rect>
+             <x>12</x>
+             <y>49</y>
+             <width>81</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>MAXİRTİFA :</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_4">
+           <property name="geometry">
+            <rect>
+             <x>12</x>
+             <y>99</y>
+             <width>71</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>MİNİRTİFA :</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_7">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>150</y>
+             <width>101</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>ORTALAMA HIZ :</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="lineEdit">
+           <property name="geometry">
+            <rect>
+             <x>100</x>
+             <y>50</y>
+             <width>137</width>
+             <height>22</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="lineEdit_2">
+           <property name="geometry">
+            <rect>
+             <x>100</x>
+             <y>90</y>
+             <width>137</width>
+             <height>22</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="lineEdit_3">
+           <property name="geometry">
+            <rect>
+             <x>100</x>
+             <y>140</y>
+             <width>137</width>
+             <height>22</height>
+            </rect>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="3" column="0" rowspan="2">
+         <widget class="QGroupBox" name="groupBox_9">
+          <property name="styleSheet">
+           <string notr="true">background: transparent;</string>
+          </property>
+          <property name="title">
+           <string>TEKNOFEST TELEMETRİSİ</string>
+          </property>
+          <widget class="QLabel" name="label_2">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>26</y>
+             <width>55</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Http:</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="telemetri_lbl">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>50</y>
+             <width>311</width>
+             <height>22</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_6">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>90</y>
+             <width>81</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Kullanici Adı : </string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_14">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>120</y>
+             <width>55</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Sifre :</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="telemetrikullancadi_lbl">
+           <property name="geometry">
+            <rect>
+             <x>122</x>
+             <y>90</y>
+             <width>201</width>
+             <height>22</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="telemetrisifre_lbl">
+           <property name="geometry">
+            <rect>
+             <x>122</x>
+             <y>120</y>
+             <width>201</width>
+             <height>22</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="giris_btn">
+           <property name="geometry">
+            <rect>
+             <x>12</x>
+             <y>160</y>
+             <width>321</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>GİRİŞ</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QGroupBox" name="groupBox_8">
+          <property name="styleSheet">
+           <string notr="true">
+
+background: transparent;</string>
+          </property>
+          <property name="title">
+           <string>KAMERA BAĞLANTISI</string>
+          </property>
+          <widget class="QLabel" name="label_33">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>50</y>
+             <width>71</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>İP ADRESİ:</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_34">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>110</y>
+             <width>55</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>PORT:</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="kameraip_lbl">
+           <property name="geometry">
+            <rect>
+             <x>130</x>
+             <y>50</y>
+             <width>113</width>
+             <height>22</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="kameraport_lbl">
+           <property name="geometry">
+            <rect>
+             <x>120</x>
+             <y>100</y>
+             <width>113</width>
+             <height>22</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="gonder_btn">
+           <property name="geometry">
+            <rect>
+             <x>70</x>
+             <y>160</y>
+             <width>93</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>GÖNDER</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="kameragonder_btn">
+           <property name="geometry">
+            <rect>
+             <x>32</x>
+             <y>130</y>
+             <width>291</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>GÖNDER</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QGroupBox" name="groupBox_6">
+          <property name="styleSheet">
+           <string notr="true">background: transparent;</string>
+          </property>
+          <property name="title">
+           <string>GroupBox</string>
+          </property>
+          <widget class="QLabel" name="label_31">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>40</y>
+             <width>55</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>İP ADRESİ</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="ip1_lbl">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>60</y>
+             <width>113</width>
+             <height>22</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_32">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>110</y>
+             <width>55</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>PORT</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="port1_lbl">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>140</y>
+             <width>113</width>
+             <height>22</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="bagintituru_cmb">
+           <property name="geometry">
+            <rect>
+             <x>160</x>
+             <y>60</y>
+             <width>131</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <item>
+            <property name="text">
+             <string>Bağlantı Türü</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>TCP</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>udp</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string/>
+            </property>
+           </item>
+          </widget>
+          <widget class="QComboBox" name="bagintigenisligi_cmb">
+           <property name="geometry">
+            <rect>
+             <x>160</x>
+             <y>140</y>
+             <width>131</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <item>
+            <property name="text">
+             <string>Bant Genişligi</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>57600</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>115200</string>
+            </property>
+           </item>
+          </widget>
+         </widget>
+        </item>
+        <item row="1" column="3" rowspan="5" colspan="2">
+         <widget class="QGroupBox" name="gb_guvenliknlemleri">
+          <property name="styleSheet">
+           <string notr="true">background: transparent;</string>
+          </property>
+          <property name="title">
+           <string>Güvenlik Önlemleri</string>
+          </property>
+          <widget class="QLineEdit" name="lineEdit_4">
+           <property name="geometry">
+            <rect>
+             <x>350</x>
+             <y>90</y>
+             <width>161</width>
+             <height>22</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="comboBox">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>90</y>
+             <width>271</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <item>
+            <property name="text">
+             <string>qr_coord_x_offset</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>qr_coord_y_offset</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>diving_distance_offset</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>diving_min_altitude_offset</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>diving_angle</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>diving_altitude</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>min_altitude</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>closing_distance</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>is_gazebo</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>closing_angle</string>
+            </property>
+           </item>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>TAKIM VERİLERİ</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_11">
+        <item row="0" column="0">
+         <widget class="QPushButton" name="pushButton">
+          <property name="styleSheet">
+           <string notr="true">background: transparent;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
